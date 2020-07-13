@@ -1,0 +1,6 @@
+module Pods_RNHelloWorld {
+  umbrella header "Pods-RNHelloWorld-umbrella.h"
+
+  export *
+  module * { export * }
+}
