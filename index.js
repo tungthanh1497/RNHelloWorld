@@ -4,6 +4,6 @@
 
 import {AppRegistry} from 'react-native';
 import {name as appName} from './app.json';
-import TextBlink from './components/TextBlink';
+import App from './App';
 
-AppRegistry.registerComponent(appName, () => TextBlink);
+AppRegistry.registerComponent(appName, () => App);
