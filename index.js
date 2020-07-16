@@ -5,6 +5,6 @@
 import {AppRegistry} from 'react-native';
 import {name as appName} from './app.json';
 import App from './App';
-import FlexDimension from './components/FlexDimension';
+import JustifyContentExample from './components/JustifyContentExample';
 
-AppRegistry.registerComponent(appName, () => FlexDimension);
+AppRegistry.registerComponent(appName, () => JustifyContentExample);
