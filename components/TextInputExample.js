@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {View, TextInput, Text} from 'react-native';
+import {View, TextInput, Text, Keyboard} from 'react-native';
 
 export default class TextInputExample extends Component {
   constructor(props) {
@@ -9,6 +9,35 @@ export default class TextInputExample extends Component {
       passwordInput: 'password',
     };
   }
+
+  componentWillMount() {
+    this.keyboardDidShowListener = Keyboard.addListener(
+      'keyboardDidShow',
+      () => {
+        this.setState(() => {
+          return {
+            emailInput: 'showing',
+          };
+        });
+      },
+    );
+    this.keyboardDidHideListener = Keyboard.addListener(
+      'keyboardDidHide',
+      () => {
+        this.setState(() => {
+          return {
+            emailInput: 'hiding',
+          };
+        });
+      },
+    );
+  }
+
+  componentWillUnmount() {
+    this.keyboardDidShowListener.remove();
+    this.keyboardDidHideListener.remove();
+  }
+
   render() {
     return (
       <View style={{marginTop: 50, flexDirection: 'column'}}>
@@ -69,8 +98,30 @@ export default class TextInputExample extends Component {
               });
             }
           }}
+          autoFocus={true}
         />
         <Text>{this.state.passwordInput}</Text>
+        <TextInput
+          style={{
+            width: 150,
+            height: 300,
+            backgroundColor: 'yellow',
+            borderColor: 'blue',
+            borderWidth: 2,
+            borderRadius: 5,
+            padding: 10,
+          }}
+          returnKeyType="done"
+          keyboardType="default"
+          secureTextEntry={true}
+          placeholder="Enter your password"
+          placeholderTextColor="green"
+          onChangeText={(text) => {}}
+          multiline={true}
+          editable={true}
+          autoFocus={true}
+          onSubmitEditing={Keyboard.dismiss}
+        />
       </View>
     );
   }
