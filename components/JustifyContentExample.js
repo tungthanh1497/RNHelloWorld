@@ -9,12 +9,13 @@ export default class JustifyContentExample extends Component {
           backgroundColor: 'blue',
           marginTop: 50,
           flex: 1,
-          flexDirection: 'row',
-          justifyContent: 'space-around',
+          flexDirection: 'column',
+          justifyContent: 'center',
+          alignItems: 'stretch',
         }}>
-        <View style={{width: 50, height: 50, backgroundColor: 'yellow'}} />
-        <View style={{width: 50, height: 50, backgroundColor: 'red'}} />
-        <View style={{width: 50, height: 50, backgroundColor: 'green'}} />
+        <View style={{height: 50, backgroundColor: 'yellow'}} />
+        <View style={{height: 50, backgroundColor: 'red'}} />
+        <View style={{height: 50, backgroundColor: 'yellow'}} />
       </View>
     );
   }
