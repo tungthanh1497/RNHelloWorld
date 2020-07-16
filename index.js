@@ -5,6 +5,6 @@
 import {AppRegistry} from 'react-native';
 import {name as appName} from './app.json';
 import App from './App';
-import JustifyContentExample from './components/JustifyContentExample';
+import TextInputExample from './components/TextInputExample';
 
-AppRegistry.registerComponent(appName, () => JustifyContentExample);
+AppRegistry.registerComponent(appName, () => TextInputExample);
