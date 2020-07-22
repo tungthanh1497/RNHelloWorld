@@ -1,5 +1,13 @@
 import React, {Component} from 'react';
-import {Text, View, Alert} from 'react-native';
+import {
+  Text,
+  View,
+  Alert,
+  TouchableHighlight,
+  TouchableNativeFeedback,
+  TouchableOpacity,
+  TouchableWithoutFeedback,
+} from 'react-native';
 import Button from 'react-native-button';
 
 export default class TouchGestureAndButton extends Component {
@@ -34,8 +42,6 @@ export default class TouchGestureAndButton extends Component {
             color="red"
           />
         </View>
-         */}
-
         <Button
           style={{
             color: 'red',
@@ -44,6 +50,20 @@ export default class TouchGestureAndButton extends Component {
           onPress={_onButtonPressed}>
           alo alo
         </Button>
+         */}
+
+        <TouchableHighlight
+          underlayColor="red"
+          onPress={_onButtonPressed}
+          // onShowUnderlay={() => {
+          //   alert('clicked');
+          // }}
+        >
+          <View style={{backgroundColor: 'green'}}>
+            <Text style={{padding: 10, fontSize: 20}}>alo</Text>
+          </View>
+        </TouchableHighlight>
+
         <Text>{messageContent}</Text>
       </View>
     );
