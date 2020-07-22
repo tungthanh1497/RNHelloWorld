@@ -5,6 +5,6 @@
 import {AppRegistry} from 'react-native';
 import {name as appName} from './app.json';
 import App from './App';
-import TouchGestureAndButton from './components/TouchGestureAndButton';
+import VerticalScrollView from './components/VerticalScrollView';
 
-AppRegistry.registerComponent(appName, () => TouchGestureAndButton);
+AppRegistry.registerComponent(appName, () => VerticalScrollView);
