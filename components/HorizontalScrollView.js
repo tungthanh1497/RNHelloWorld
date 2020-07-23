@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {
+  AppRegistry,
   ScrollView,
   Image,
   Text,
@@ -8,6 +9,7 @@ import {
   Dimensions,
 } from 'react-native';
 import Button from 'react-native-button';
+import HelloWorld from './HelloWorld';
 
 export default class HorizontalScrollView extends Component {
   render() {
@@ -36,6 +38,7 @@ export default class HorizontalScrollView extends Component {
         minimumZoomScale={0.2}>
         <View style={{width: screenWidth, flex: 1, backgroundColor: 'yellow'}}>
           <Text>alo</Text>
+          <HelloWorld />
         </View>
         <View style={{width: screenWidth, flex: 1, backgroundColor: 'tomato'}}>
           <Text>alo</Text>
